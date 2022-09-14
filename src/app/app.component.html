@@ -1,2 +1,9 @@
 <h1>{{ title }}</h1>
+<h2>{{ name }}</h2>
+<h3>{{ age }}</h3>
+<button (click)="xinChao()">click me</button>
 <hello-component></hello-component>
+
+<div *ngFor="let author of authors">
+  {{ author.id }} - {{ author.firstName }} {{ author.lastName }}
+</div>
