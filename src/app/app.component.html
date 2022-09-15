@@ -1,20 +1,14 @@
-<h1>{{ title }}</h1>
-<h2>{{ name }}</h2>
-<h3>{{ age }}</h3>
-<button (click)="xinChao()">click me</button>
-<hello-component></hello-component>
+<button (click)="isDanger = !isDanger">Toggle Danger</button>
+<br />
+<button (click)="isWarning = !isWarning">Toggle Warning</button>
 
-<div *ngFor="let author of authors">
-  {{ author.id }} - {{ author.firstName }} {{ author.lastName }}
-</div>
+<div class="box" [class]="classes"></div>
 
-<div>
-  <h2>ngIf - ngForOf</h2>
-  <ul>
-    <li *ngFor="let u of users; index as idx; count as total">
-      {{ u.name }} -- {{ u.phone }}
-      <br />
-      <p>this item is index {{ idx }} of total {{ total }} items</p>
-    </li>
-  </ul>
-</div>
+<p [style.color]="blue" [style.background-color]="'grey'">This is test text</p>
+<br />
+<p
+  [style.--text-color]="isDanger ? 'red' : 'white'"
+  [style]="{ color: 'var(--text-color)', backgroundColor: 'lightblue' }"
+>
+  This is second test line
+</p>
