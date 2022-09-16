@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  isDanger = false;
-  isWarning = false;
-  classes = 'box red-border yellow-background';
-  blue = 'lightblue';
+  name = 'Tiep Phan';
+  checked = true;
 }
