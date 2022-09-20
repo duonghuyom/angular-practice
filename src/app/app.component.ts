@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  name = 'Tiep Phan';
-  checked = true;
+  date = new Date();
+  user = {
+    name: 'duognhuy',
+    age: 21,
+  };
 }

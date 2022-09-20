@@ -1,9 +1,14 @@
-<p>Your name: {{ name }}</p>
-
-<input type="text" [(ngModel)]="name" (ngModelChange)="name = $event" />
-
+<p>Pipes</p>
 <br />
+<p>{{ date | date }}</p>
 <br />
+<p>{{ date | date: "short" }}</p>
 <br />
-
-<app-toggle [(checked)]="checked"></app-toggle>
+<p>{{ "duonghuy" | uppercase }}</p>
+<br />
+<p>{{ 250 | currency }}</p>
+<p>{{ 250000 | currency: "VND" }}</p>
+<p>{{ 2.32920384 | number: "1.1-6" }}</p>
+<p>{{ 0.49 | percent }}</p>
+<br />
+<p>{{ user | json }}</p>
