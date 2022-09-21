@@ -11,4 +11,30 @@
 <p>{{ 2.32920384 | number: "1.1-6" }}</p>
 <p>{{ 0.49 | percent }}</p>
 <br />
-<p>{{ user | json }}</p>
+<p>{{ users | json }}</p>
+<br />
+{{
+  addr.address1 +
+    "," +
+    addr.address2 +
+    "," +
+    addr.city +
+    "," +
+    addr.state +
+    "," +
+    addr.state +
+    "," +
+    addr.zip +
+    "," +
+    addr.country
+}}
+<br />
+{{ formatAddress(addr) }}
+<br />
+{{ addr | formatAddressPipe }}
+<br />
+<p *ngFor="let user of users | adultpipe">{{ user.name }} - {{ user.age }}</p>
+
+<!-- neu them mot phan tu vao trong danh sach user, 1. can phai tham chieu mot
+mang moi de pipe co the cap nhan duoc, 2. them truong pure: false o trong pipe
+de no biet day khong phai la pure pipe -->
